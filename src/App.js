@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from './Navbar';
 import VendingMachine from './VendingMachine';
 import Soda from './Soda';
 import Sardine from './Sardine';
@@ -7,6 +8,7 @@ import { Route, Switch } from 'react-router-dom';
 
 const App = () => (
   <div className="App">
+    <Navbar />
     <Switch>
       <Route exact path="/" render={() => <VendingMachine />} />
       <Route exact path="/soda" render={() => <Soda />} />

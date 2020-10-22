@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Chips extends Component {
   render() {
-    return <div>Chips</div>;
+    return (
+      <div>
+        <h1>Chips</h1>
+        <Link to="/">back</Link>
+      </div>
+    );
   }
 }
 export default Chips;
