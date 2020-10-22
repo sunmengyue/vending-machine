@@ -3,17 +3,17 @@ import VendingMachine from './VendingMachine';
 import Soda from './Soda';
 import Sardine from './Sardine';
 import Chips from './Chips';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 const App = () => (
-  <Router>
+  <div className="App">
     <Switch>
-      <Route exact path="/" component={VendingMachine} />
-      <Route exact path="/soda" component={Soda} />
-      <Route exact path="/chips" component={Chips} />
-      <Route exact path="/sardine" component={Sardine} />
+      <Route exact path="/" render={() => <VendingMachine />} />
+      <Route exact path="/soda" render={() => <Soda />} />
+      <Route exact path="/chips" render={() => <Chips />} />
+      <Route exact path="/sardine" render={() => <Sardine />} />
     </Switch>
-  </Router>
+  </div>
 );
 
 export default App;
